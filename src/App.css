@@ -1,0 +1,143 @@
+/* =========================================
+   1. VARIABLES GLOBALES Y FONDOS
+   ========================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --plum-dark: #7d355b; /* Color ciruela oscuro para los textos y detalles */
+  --pale-pink: #f7f4f4; /* Rosa pálido para los textos y detalles */
+  --bg-dark: #282727; /* Fondo gris oscuro de tu imagen */
+  --text-light: #f4f1f1; /* Letras oscuras para contrastar con el fondo claro */
+  --text-dark: #262525;
+  --border-radius-lg: 24px; 
+  --border-radius-md: 16px; 
+}
+
+body {
+  background-color: #1a1a1a; /* Fondo casi negro afuera del celular */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-light); /* Letras blancas para contrastar con el fondo oscuro */
+}
+
+/* =========================================
+   2. CONTENEDOR DEL TELÉFONO Y CABECERA
+   ========================================= */
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: var(--bg-dark); /* Teléfono en gris oscuro */
+  min-height: 100vh;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app-header {
+  padding: 1.5rem;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-top { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+/* Ajustes de tu nuevo Logo ELLA */
+.brand-logo {
+  height: 90px; 
+  width: auto;
+  object-fit: contain;
+}
+
+.header-date { 
+  color: var(--pale-pink); 
+  font-size: 1rem; 
+  font-weight: 600; 
+}
+
+.app-content { flex: 1; padding: 1.5rem; }
+
+/* =========================================
+   3. TEXTOS PRINCIPALES
+   ========================================= */
+h2 { color: var(--pale-pink); font-size: 1.8rem; font-weight: 800; margin-bottom: 0.2rem; }
+.subtitle { font-size: 0.95rem; margin-bottom: 2rem; color: #cccccc; } 
+.back-button { display: inline-block; margin-bottom: 1.5rem; color: var(--pale-pink); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+.welcome-section { margin-bottom: 2.5rem; }
+
+/* =========================================
+   4. TARJETAS DEL MENÚ (ROSITAS Y REDONDEADAS)
+   ========================================= */
+.menu-card {
+  background-color: var(--pale-pink); 
+  padding: 1.2rem;
+  border-radius: var(--border-radius-lg); 
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--plum-dark); 
+  color: var(--pale-pink);
+  border-radius: var(--border-radius-md); 
+  flex-shrink: 0;
+}
+
+.card-text h3 {
+  color: var(--plum-dark); 
+  font-weight: 800;
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-text p { 
+  font-size: 0.9rem; 
+  color: #333; 
+  line-height: 1.3; 
+}
+
+.arrow-icon {
+  margin-left: auto;
+  color: var(--plum-dark);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* =========================================
+   5. ANIMACIONES
+   ========================================= */
+.fade-in { animation: fadeIn 0.4s ease-out forwards; }
+
+@keyframes fadeIn { 
+  from { opacity: 0; transform: translateY(10px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+/* Ajuste global para los iconos de imagen en tarjetas */
+.custom-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
