@@ -296,3 +296,37 @@
   height: 38px;
   object-fit: contain;
 }
+.call-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ubicacion-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.call-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ubicacion-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.support-icon-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.modal-icon-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
